@@ -50,6 +50,7 @@ export default function ProductsList() {
   const displayProducts = showAll
     ? filteredProducts
     : filteredProducts.slice(0, 8);
+  console.log(displayProducts);
 
   const toggleCategory = (cat) => {
     const c = cat.toLowerCase();
