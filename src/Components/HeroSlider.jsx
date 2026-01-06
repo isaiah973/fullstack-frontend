@@ -1,6 +1,6 @@
 // src/Components/HeroSlider.jsx
 import { useEffect, useState } from "react";
-import { fetchAllProducts } from "../Data/Products";
+import { fetchAllProducts } from "../Data/products";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { FiChevronDown } from "react-icons/fi";
@@ -55,7 +55,7 @@ export default function HeroSlider() {
           {/* Image */}
           <div className="w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-center p-4">
             <img
-              src={`http://localhost:5000${currentProduct.image}`}
+              src={currentProduct.image}
               alt={currentProduct.title}
               className="w-full h-full object-contain rounded-lg shadow-lg"
             />

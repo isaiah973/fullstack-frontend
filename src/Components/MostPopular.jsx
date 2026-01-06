@@ -1,6 +1,6 @@
 // src/Components/PopularProducts.jsx
 import { useEffect, useState, useContext } from "react";
-import { fetchAllProducts } from "../Data/Products";
+import { fetchAllProducts } from "../Data/products";
 import { CartContext } from "../Pages/Context/CartContext.jsx";
 import { WishlistContext } from "../Pages/Context/WishlistContext.jsx";
 import { FiHeart, FiShoppingCart } from "react-icons/fi";
@@ -36,7 +36,7 @@ export default function PopularProducts() {
             {/* IMAGE */}
             <div className="w-full h-80 bg-gray-100 flex items-center justify-center relative">
               <img
-                src={`http://localhost:5000${product.image}`}
+                src={product.image}
                 alt={product.title}
                 className="max-h-72 object-contain"
               />
