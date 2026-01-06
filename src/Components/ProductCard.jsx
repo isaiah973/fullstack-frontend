@@ -217,14 +217,14 @@ export default function ProductsList() {
 
                     <div className="flex gap-5 items-center">
                       <div className="w-1/3 h-40 bg-gray-100 rounded-xl flex items-center justify-center">
-                        {product?.image && (
-                          <img src={product.image} alt="product" />
-                        )}
-                        className="max-h-full object-contain" onError=
-                        {(e) => {
-                          e.target.src = "/fallback.png";
-                        }}{" "}
-                        // optional fallback />
+                        <img
+                          src={product.image}
+                          alt={product.title}
+                          className="max-h-full object-contain"
+                          onError={(e) => {
+                            e.target.src = "/fallback.png";
+                          }} // optional fallback
+                        />
                       </div>
 
                       <div className="flex-1">
